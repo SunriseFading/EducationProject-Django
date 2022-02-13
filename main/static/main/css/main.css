@@ -26,7 +26,7 @@ aside .logo {
 }
 
 aside h3 {
-    margin-top: 50px;
+    margin-top: 40px;
     font-size: 28px;
 }
 
@@ -55,7 +55,7 @@ aside ul a:hover {
 main .features {
     float: left;
     color: #fff;
-    margin-top: 100px;
+    margin-top: 53px;
     text-align: center;
     width: 75%;
 }
@@ -66,13 +66,33 @@ main .features h1 {
 
 main .features p {
     max-width: 400px;
-    margin: 20px auto;
+    margin: 35px auto;
 }
 
-.alert-warning {
+.alert-secondary {
     float: left;
     clear: both;
     width: 400px;
     margin: 20px 34%;
     text-align: left;
+}
+
+.news_page h1 {
+    text-align: center;
+    color: #fff;
+    padding-top: 60px;
+    padding-bottom: 6px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.news_page p {
+    text-align: center;
+    color: #fff;
+}
+
+.full_text {
+    color: #fff;
+    margin-top: -5px;
+    text-align: center;
 }

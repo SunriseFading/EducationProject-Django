@@ -1,17 +1,27 @@
-{% extends 'main/layout.html' %} 
-{% block title %} Новости на сайте {% endblock title%}
+{% extends 'main/layout.html' %} {% block title %} Новости {% endblock title%}
 {% block content %}
-<div class="features">
-    <h1>Новости на сайте</h1>
-    {% if news %}
-        {% for el in news %}
-            <div class="alert alert-warning">
-                <h3>{{ el.title }}</h3>
-                <p>{{ el.anons }}</p>
+    <h1 style="text-align: center; color: #fff; padding-top: 60px; padding-bottom: 30px; font-size: 40px; font-weight: bold;">Новости</h1>
+    {% if news %} {% for el in news %}
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">IT</strong>
+                    <h3 class="mb-0">
+                        <a
+                            class="text-dark"
+                            href="{% url 'news-detail' el.id %}"
+                            >{{ el.title }}</a
+                        >
+                    </h3>
+                    <div class="mb-1 text-muted">{{ el.date }}</div>
+                    <p class="card-text mb-auto">{{ el.anons }}</p>
+                    <a href="{% url 'news-detail' el.id %}">Читать далее</a>
+                </div>
             </div>
-        {% endfor %}
-    {% else %}
-        <p>Новых записей нет</p>
-    {% endif %}
-</div>
-{% endblock content %}
+        </div>
+    </div>
+    {% endfor %} {% else %}
+    <p>Новых записей нет</p>
+    {% endif %} {% for el in news %} {% endfor %} {% endblock content %}
+
